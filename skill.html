@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta property="og:site_name" content="">
+    <meta property="og:url" content="https://reallavo.com">
+    <meta property="og:title" content="reallavo.com">
+    <meta property="og:description" content="i'm an avocado">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.7, user-scalable=no">
+    <link rel="stylesheet" href="styles.css">
+    <meta property="og:image" content="https://media.discordapp.net/attachments/1050074417989951508/1069981252024807555/image.png?width=561&height=557">
+    <title>reallavo</title>
+	<style>
+		.progress-container {
+		background-color: rgba(0, 0, 0, 0);
+		  display:flex;
+		  flex-direction: column;
+		  align-items: center;
+		  justify-content: center;
+		  height: 100vh;
+		}
+	
+		.progress-bar {
+		  width: 800px;
+		  background-color: #3535354b;
+		  border-radius:10cm;
+		  overflow: hidden;
+		  margin-bottom: 10px;
+		}
+	
+		.progress-bar-text {
+		font-family: 'Courier New', Courier, monospace;
+		  padding: 10px;
+		  color: #ffffff;
+		}
+		.skill-bar-text {
+			font-size: large;
+		font-family: 'Courier New', Courier, monospace;
+		  padding: 10px;
+		  color: #ffffff;
+		}
+	
+		.progress-bar-fill {
+		  height: 20px;
+		  background-color: #ffffff;
+		  width: 0%;
+		  transition: width 0.5s ease;
+		  
+		}
+		@media (max-width: 767px) {
+		.progress-bar {
+		  width: 80%;
+		  background-color: #3535354b;
+		  border-radius:10cm;
+		  overflow: hidden;
+		  margin-bottom: 10px;
+		}
+	
+		.progress-bar-text {
+		font-family: 'Courier New', Courier, monospace;
+		  padding: 10px;
+		  color: #ffffff;
+		}
+		.skill-bar-text {
+			font-size: large;
+		font-family: 'Courier New', Courier, monospace;
+		  padding: 10px;
+		  color: #ffffff;
+		}
+	
+		.progress-bar-fill {
+		  height: 20px;
+		  background-color: #ffffff;
+		  width: 0%;
+		  transition: width 0.5s ease;
+		  
+		}
+			
+}
+	  </style>
+</head>
+<body>
+    <script src="/main.js"></script>
+   
+	<div class="topnav">
+		<nav>
+	  <a href="index.html">About Me</a>
+	  <a href="#">Skills</a>
+	  <a href="contact.html">Contact</a>
+	   </nav>
+  
+  </div>
+
+  <div class="progress-container">
+	<div class="skill-bar-text">My coding skills based on what I think</div>
+	<div class="progress-bar-text">Javascript / Typescript</div>
+
+    <div class="progress-bar">
+      <div class="progress-bar-fill" style="width: 90%;"></div>
+    </div>
+	<div class="progress-bar-text">Node.JS</div>
+
+    <div class="progress-bar">
+      <div class="progress-bar-fill" style="width: 85%;"></div>
+    </div>
+	<div class="progress-bar-text">HTML / CSS</div>
+
+    <div class="progress-bar">
+      <div class="progress-bar-fill" style="width: 15%;"></div>
+    </div>
+  </div>
+			<script>
+				// Get all the bar-inner elements
+				const bars = document.querySelectorAll('.progress-bar-fill');
+		
+				// Loop through the bar-inner elements
+				bars.forEach(bar => {
+					
+					const observer = new IntersectionObserver(entries => {
+						if (entries[0].isIntersecting) {
+						
+							bar.classList.add('animate');
+							bar.classList.remove('unanimate')
+						}else{
+							bar.classList.add('unanimate')
+							bar.classList.remove('animate')
+							
+						}
+					}, { threshold: 0.5 });
+		
+					observer.observe(bar);
+				});
+			</script>
+		
+		
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
